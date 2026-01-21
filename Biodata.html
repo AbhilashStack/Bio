@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pocha Abhilash Reddy - Bio Data</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 10px;
+      font-size: 36px;
+      color: #2d3748;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    h2 {
+      color: #667eea;
+      padding-bottom: 10px;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      font-size: 22px;
+      font-weight: 600;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 24px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 3px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #718096;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+
+    tr {
+      border-bottom: 1px solid #e2e8f0;
+      transition: background-color 0.3s ease;
+    }
+
+    tr:last-child {
+      border-bottom: none;
+    }
+
+    tr:hover {
+      background-color: #f7fafc;
+    }
+
+    td {
+      padding: 14px 8px;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+
+    td:first-child {
+      font-weight: 600;
+      width: 38%;
+      color: #4a5568;
+    }
+
+    td:last-child {
+      color: #2d3748;
+    }
+
+    .photo {
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+
+    .photo img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid #fff;
+      box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+      transition: transform 0.3s ease;
+    }
+
+    .photo img:hover {
+      transform: scale(1.05);
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    button {
+      padding: 14px 32px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      border-radius: 50px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #a0aec0;
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid #e2e8f0;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .container {
+        box-shadow: none;
+        border-radius: 0;
+        padding: 30px;
+      }
+
+      .container::before {
+        display: none;
+      }
+
+      .actions {
+        display: none;
+      }
+
+      .photo img {
+        box-shadow: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      td:first-child {
+        width: 45%;
+      }
+
+      .photo img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>Pocha Abhilash Reddy</h1>
+    <div class="subtitle">Senior Software Engineer | Bosch Global Software Technologie.</div>
+
+    <div class="photo">
+      <!-- Replace src with your photo -->
+      <img src="abhi.jpg" alt="Profile Photo">
+    </div>
+
+    <h2>Personal Details</h2>
+    <table>
+      <tr><td>Date of Birth</td><td>21-08-1999</td></tr>
+      <tr><td>Age</td><td>26</td></tr>
+      <tr><td>Height</td><td>6.1 feet</td></tr>
+      <tr><td>Religion / Caste</td><td>Hindu / Reddy</td></tr>
+      <tr><td>Mother Tongue</td><td>Telugu</td></tr>
+    </table>
+
+    <h2>Education</h2>
+    <table>
+      <tr><td>Highest Qualification</td><td>Bachelor of Technology in Electronics and Communication</td></tr>
+      <tr><td>University</td><td>Reva University</td></tr>
+    </table>
+
+    <h2>Professional Details</h2>
+    <table>
+      <tr><td>Occupation</td><td>Senior Software Engineer</td></tr>
+      <tr><td>Company</td><td>Bosch Global Software Technologies</td></tr>
+      <tr><td>CTC</td><td>₹10,80,000</td></tr>
+    </table>
+
+    <h2>Family Details</h2>
+    <table>
+      <tr><td>Father</td><td>Pocha Venkateswara Reddy  - Farmer</td></tr>
+      <tr><td>Mother</td><td>Pocha Lalitha - Home maker</td></tr>
+      <tr><td>Twin Sibling</td><td>Pocha Aakash Reddy - Working Professional</td></tr>
+    </table>
+
+    <h2>Contact Details</h2>
+    <table>
+      <tr><td>Mobile</td><td>9959410629,8688123951</td></tr>
+      <tr><td>Address</td><td>Yerragudi Village, Nandyala Dist 518166</td></tr>
+    </table>
+
+    <div class="actions">
+      <button onclick="window.print()">📄 Download / Save as PDF</button>
+    </div>
+
+    <div class="footer">
+      Last Updated: 2024-06-15
+    </div>
+
+  </div>
+</body>
+</html>
