@@ -173,6 +173,31 @@
       border-top: 1px solid #e2e8f0;
     }
 
+    .ctc-row {
+      display: none;
+    }
+
+    .ctc-row.visible {
+      display: table-row;
+    }
+
+    .toggle-btn {
+      display: inline;
+      padding: 0;
+      font-size: 14px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      color: #667eea;
+      font-weight: 400;
+      text-decoration: underline;
+      transition: color 0.3s ease;
+    }
+
+    .toggle-btn:hover {
+      color: #764ba2;
+    }
+
     @media print {
       body {
         background: white;
@@ -209,6 +234,16 @@
       /* Force Professional Details to start on a new page */
       h2:nth-of-type(3) {
         page-break-before: always;
+      }
+
+      /* Always show CTC in print/PDF */
+      .ctc-row {
+        display: table-row !important;
+      }
+
+      /* Hide toggle button in print/PDF */
+      .toggle-btn {
+        display: none;
       }
     }
 
@@ -268,7 +303,9 @@
       <tr><td>Occupation</td><td>Senior Software Engineer</td></tr>
       <tr><td>Company</td><td>Bosch Global Software Technologies</td></tr>
       <tr><td>Present Work Location</td><td>Coimbatore (T.N)</td></tr>
+      <tr class="ctc-row" id="ctcRow"><td>CTC</td><td>₹11,00,000</td></tr>
     </table>
+    <button class="toggle-btn" onclick="toggleCTC()">more details</button>
 
     <h2>Family Details</h2>
     <table>
@@ -292,5 +329,20 @@
     </div>
 
   </div>
+
+  <script>
+    function toggleCTC() {
+      const ctcRow = document.getElementById('ctcRow');
+      const btn = event.target;
+      
+      if (ctcRow.classList.contains('visible')) {
+        ctcRow.classList.remove('visible');
+        btn.textContent = 'more details';
+      } else {
+        ctcRow.classList.add('visible');
+        btn.textContent = 'hide details';
+      }
+    }
+  </script>
 </body>
 </html>
