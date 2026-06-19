@@ -196,6 +196,20 @@
       .photo img {
         box-shadow: none;
       }
+
+      /* Prevent page breaks inside sections */
+      h2 {
+        page-break-after: avoid;
+      }
+
+      table {
+        page-break-inside: avoid;
+      }
+
+      /* Force Professional Details to start on a new page */
+      h2:nth-of-type(3) {
+        page-break-before: always;
+      }
     }
 
     @media (max-width: 768px) {
